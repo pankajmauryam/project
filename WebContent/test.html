@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(document).ready(function()
+            		{
+                 $("#like").change(function(){
+                     var value = $(this).val();
+                     $.get("data.jsp",{q:value},function(data){
+                      $("#javaquery").html(data);
+                     });
+                 });
+             });
+        </script>
+    </head>
+    <body>
+  
+    <h1>This example of select statement using Ajax and javaquery</h1>
+     <a id=like > like</a>       <br />
+        <div id="javaquery"><b>Count will be displayed here</b></div>
+    </body>
+</html>
